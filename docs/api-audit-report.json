@@ -1,0 +1,670 @@
+{
+  "generatedAt": "2026-09-10T06:27:47.511Z",
+  "summary": {
+    "apiCount": 31,
+    "mockCount": 31,
+    "missingInMock": 0,
+    "unusedInMock": 0
+  },
+  "apiEndpoints": [
+    {
+      "apiFile": "auth.js",
+      "fn": "login",
+      "method": "POST",
+      "url": "/auth/login",
+      "doc": "登录"
+    },
+    {
+      "apiFile": "auth.js",
+      "fn": "logout",
+      "method": "POST",
+      "url": "/auth/logout",
+      "doc": "退出登录"
+    },
+    {
+      "apiFile": "auth.js",
+      "fn": "getPatientContext",
+      "method": "GET",
+      "url": "/auth/patient-context",
+      "doc": "获取当前患者上下文（患者/家属）"
+    },
+    {
+      "apiFile": "diet.js",
+      "fn": "getTodayDiet",
+      "method": "GET",
+      "url": "/diet/today",
+      "doc": "今日食谱"
+    },
+    {
+      "apiFile": "diet.js",
+      "fn": "getNutritionPlan",
+      "method": "GET",
+      "url": "/diet/nutrition",
+      "doc": "营养方案"
+    },
+    {
+      "apiFile": "diet.js",
+      "fn": "getDietTaboos",
+      "method": "GET",
+      "url": "/diet/taboos",
+      "doc": "饮食禁忌"
+    },
+    {
+      "apiFile": "diet.js",
+      "fn": "getDishList",
+      "method": "GET",
+      "url": "/dishes",
+      "doc": "餐品列表（在线点餐）"
+    },
+    {
+      "apiFile": "diet.js",
+      "fn": "getMealOrders",
+      "method": "GET",
+      "url": "/meal-orders",
+      "doc": "我的点餐订单"
+    },
+    {
+      "apiFile": "diet.js",
+      "fn": "createMealOrder",
+      "method": "POST",
+      "url": "/meal-orders",
+      "doc": "提交点餐订单"
+    },
+    {
+      "apiFile": "diet.js",
+      "fn": "cancelMealOrder",
+      "method": "POST",
+      "url": "/meal-orders/${id}/cancel",
+      "doc": "取消点餐订单"
+    },
+    {
+      "apiFile": "education.js",
+      "fn": "getEducationList",
+      "method": "GET",
+      "url": "/education",
+      "doc": "宣教列表（可按类型筛选）"
+    },
+    {
+      "apiFile": "education.js",
+      "fn": "getEducationDetail",
+      "method": "GET",
+      "url": "/education/${id}",
+      "doc": "宣教详情"
+    },
+    {
+      "apiFile": "fee.js",
+      "fn": "getFeeDetails",
+      "method": "GET",
+      "url": "/fees",
+      "doc": "费用明细（可按日期筛选），返回 { items, total }"
+    },
+    {
+      "apiFile": "fee.js",
+      "fn": "getFeeDaily",
+      "method": "GET",
+      "url": "/fees/daily",
+      "doc": "每日费用汇总"
+    },
+    {
+      "apiFile": "fee.js",
+      "fn": "getInsuranceInfo",
+      "method": "GET",
+      "url": "/insurance",
+      "doc": "医保信息"
+    },
+    {
+      "apiFile": "fee.js",
+      "fn": "getDepositSummary",
+      "method": "GET",
+      "url": "/deposit/summary",
+      "doc": "预缴金汇总（总额/已用/余额/欠费预警）"
+    },
+    {
+      "apiFile": "fee.js",
+      "fn": "getDepositRecords",
+      "method": "GET",
+      "url": "/deposit/records",
+      "doc": "预缴金记录"
+    },
+    {
+      "apiFile": "home.js",
+      "fn": "getHomeSummary",
+      "method": "GET",
+      "url": "/home/summary",
+      "doc": "首页今日概览（最新体征、费用/余额、今日待办）"
+    },
+    {
+      "apiFile": "hospital.js",
+      "fn": "getHospitalInfo",
+      "method": "GET",
+      "url": "/hospital/info",
+      "doc": "医院概况"
+    },
+    {
+      "apiFile": "hospital.js",
+      "fn": "getDepartments",
+      "method": "GET",
+      "url": "/hospital/departments",
+      "doc": "科室介绍"
+    },
+    {
+      "apiFile": "hospital.js",
+      "fn": "getHospitalGuide",
+      "method": "GET",
+      "url": "/hospital/guide",
+      "doc": "就诊指南与楼层分布"
+    },
+    {
+      "apiFile": "notice.js",
+      "fn": "getNoticeList",
+      "method": "GET",
+      "url": "/notices",
+      "doc": "通知公告列表"
+    },
+    {
+      "apiFile": "order.js",
+      "fn": "getMedicalOrders",
+      "method": "GET",
+      "url": "/orders",
+      "doc": "医嘱列表（可按类型/类别/状态筛选）"
+    },
+    {
+      "apiFile": "order.js",
+      "fn": "getExaminations",
+      "method": "GET",
+      "url": "/examinations",
+      "doc": "检查检验列表"
+    },
+    {
+      "apiFile": "patient.js",
+      "fn": "getPatientInfo",
+      "method": "GET",
+      "url": "/patient/info",
+      "doc": "患者基本信息 + 住院信息"
+    },
+    {
+      "apiFile": "patient.js",
+      "fn": "getDiagnoses",
+      "method": "GET",
+      "url": "/patient/diagnoses",
+      "doc": "诊断记录"
+    },
+    {
+      "apiFile": "patient.js",
+      "fn": "getAllergies",
+      "method": "GET",
+      "url": "/patient/allergies",
+      "doc": "过敏史"
+    },
+    {
+      "apiFile": "patient.js",
+      "fn": "getContacts",
+      "method": "GET",
+      "url": "/patient/contacts",
+      "doc": "家属/紧急联系人"
+    },
+    {
+      "apiFile": "staff.js",
+      "fn": "getResponsibleStaff",
+      "method": "GET",
+      "url": "/staff/responsible",
+      "doc": "责任医护团队"
+    },
+    {
+      "apiFile": "staff.js",
+      "fn": "getDutySchedule",
+      "method": "GET",
+      "url": "/staff/duty",
+      "doc": "责任医护本周排班"
+    },
+    {
+      "apiFile": "vital.js",
+      "fn": "getVitalSigns",
+      "method": "GET",
+      "url": "/vitals",
+      "doc": "体征记录（days: 近 N 天）"
+    }
+  ],
+  "mockRoutes": [
+    {
+      "method": "POST",
+      "url": "/auth/login"
+    },
+    {
+      "method": "POST",
+      "url": "/auth/logout"
+    },
+    {
+      "method": "GET",
+      "url": "/auth/patient-context"
+    },
+    {
+      "method": "GET",
+      "url": "/home/summary"
+    },
+    {
+      "method": "GET",
+      "url": "/notices"
+    },
+    {
+      "method": "GET",
+      "url": "/patient/info"
+    },
+    {
+      "method": "GET",
+      "url": "/patient/diagnoses"
+    },
+    {
+      "method": "GET",
+      "url": "/patient/allergies"
+    },
+    {
+      "method": "GET",
+      "url": "/patient/contacts"
+    },
+    {
+      "method": "GET",
+      "url": "/orders"
+    },
+    {
+      "method": "GET",
+      "url": "/examinations"
+    },
+    {
+      "method": "GET",
+      "url": "/vitals"
+    },
+    {
+      "method": "GET",
+      "url": "/fees"
+    },
+    {
+      "method": "GET",
+      "url": "/fees/daily"
+    },
+    {
+      "method": "GET",
+      "url": "/insurance"
+    },
+    {
+      "method": "GET",
+      "url": "/deposit/summary"
+    },
+    {
+      "method": "GET",
+      "url": "/deposit/records"
+    },
+    {
+      "method": "GET",
+      "url": "/diet/today"
+    },
+    {
+      "method": "GET",
+      "url": "/diet/nutrition"
+    },
+    {
+      "method": "GET",
+      "url": "/diet/taboos"
+    },
+    {
+      "method": "GET",
+      "url": "/dishes"
+    },
+    {
+      "method": "GET",
+      "url": "/meal-orders"
+    },
+    {
+      "method": "POST",
+      "url": "/meal-orders"
+    },
+    {
+      "method": "POST",
+      "url": "/meal-orders/:id/cancel"
+    },
+    {
+      "method": "GET",
+      "url": "/staff/responsible"
+    },
+    {
+      "method": "GET",
+      "url": "/staff/duty"
+    },
+    {
+      "method": "GET",
+      "url": "/hospital/info"
+    },
+    {
+      "method": "GET",
+      "url": "/hospital/departments"
+    },
+    {
+      "method": "GET",
+      "url": "/hospital/guide"
+    },
+    {
+      "method": "GET",
+      "url": "/education"
+    },
+    {
+      "method": "GET",
+      "url": "/education/:id"
+    }
+  ],
+  "missingInMock": [],
+  "unusedInMock": [],
+  "pageUsage": [
+    {
+      "page": "dashboard",
+      "apiFiles": [
+        "home.js",
+        "patient.js"
+      ],
+      "endpoints": [
+        {
+          "apiFile": "home.js",
+          "fn": "getHomeSummary",
+          "method": "GET",
+          "url": "/home/summary",
+          "doc": "首页今日概览（最新体征、费用/余额、今日待办）"
+        },
+        {
+          "apiFile": "patient.js",
+          "fn": "getPatientInfo",
+          "method": "GET",
+          "url": "/patient/info",
+          "doc": "患者基本信息 + 住院信息"
+        }
+      ]
+    },
+    {
+      "page": "diet",
+      "apiFiles": [
+        "diet.js"
+      ],
+      "endpoints": [
+        {
+          "apiFile": "diet.js",
+          "fn": "getTodayDiet",
+          "method": "GET",
+          "url": "/diet/today",
+          "doc": "今日食谱"
+        },
+        {
+          "apiFile": "diet.js",
+          "fn": "getNutritionPlan",
+          "method": "GET",
+          "url": "/diet/nutrition",
+          "doc": "营养方案"
+        },
+        {
+          "apiFile": "diet.js",
+          "fn": "getDietTaboos",
+          "method": "GET",
+          "url": "/diet/taboos",
+          "doc": "饮食禁忌"
+        },
+        {
+          "apiFile": "diet.js",
+          "fn": "getDishList",
+          "method": "GET",
+          "url": "/dishes",
+          "doc": "餐品列表（在线点餐）"
+        },
+        {
+          "apiFile": "diet.js",
+          "fn": "getMealOrders",
+          "method": "GET",
+          "url": "/meal-orders",
+          "doc": "我的点餐订单"
+        },
+        {
+          "apiFile": "diet.js",
+          "fn": "createMealOrder",
+          "method": "POST",
+          "url": "/meal-orders",
+          "doc": "提交点餐订单"
+        },
+        {
+          "apiFile": "diet.js",
+          "fn": "cancelMealOrder",
+          "method": "POST",
+          "url": "/meal-orders/${id}/cancel",
+          "doc": "取消点餐订单"
+        }
+      ]
+    },
+    {
+      "page": "education",
+      "apiFiles": [
+        "education.js"
+      ],
+      "endpoints": [
+        {
+          "apiFile": "education.js",
+          "fn": "getEducationList",
+          "method": "GET",
+          "url": "/education",
+          "doc": "宣教列表（可按类型筛选）"
+        },
+        {
+          "apiFile": "education.js",
+          "fn": "getEducationDetail",
+          "method": "GET",
+          "url": "/education/${id}",
+          "doc": "宣教详情"
+        }
+      ]
+    },
+    {
+      "page": "fee",
+      "apiFiles": [
+        "fee.js"
+      ],
+      "endpoints": [
+        {
+          "apiFile": "fee.js",
+          "fn": "getFeeDetails",
+          "method": "GET",
+          "url": "/fees",
+          "doc": "费用明细（可按日期筛选），返回 { items, total }"
+        },
+        {
+          "apiFile": "fee.js",
+          "fn": "getFeeDaily",
+          "method": "GET",
+          "url": "/fees/daily",
+          "doc": "每日费用汇总"
+        },
+        {
+          "apiFile": "fee.js",
+          "fn": "getInsuranceInfo",
+          "method": "GET",
+          "url": "/insurance",
+          "doc": "医保信息"
+        },
+        {
+          "apiFile": "fee.js",
+          "fn": "getDepositSummary",
+          "method": "GET",
+          "url": "/deposit/summary",
+          "doc": "预缴金汇总（总额/已用/余额/欠费预警）"
+        },
+        {
+          "apiFile": "fee.js",
+          "fn": "getDepositRecords",
+          "method": "GET",
+          "url": "/deposit/records",
+          "doc": "预缴金记录"
+        }
+      ]
+    },
+    {
+      "page": "hospital",
+      "apiFiles": [
+        "hospital.js"
+      ],
+      "endpoints": [
+        {
+          "apiFile": "hospital.js",
+          "fn": "getHospitalInfo",
+          "method": "GET",
+          "url": "/hospital/info",
+          "doc": "医院概况"
+        },
+        {
+          "apiFile": "hospital.js",
+          "fn": "getDepartments",
+          "method": "GET",
+          "url": "/hospital/departments",
+          "doc": "科室介绍"
+        },
+        {
+          "apiFile": "hospital.js",
+          "fn": "getHospitalGuide",
+          "method": "GET",
+          "url": "/hospital/guide",
+          "doc": "就诊指南与楼层分布"
+        }
+      ]
+    },
+    {
+      "page": "login",
+      "apiFiles": [],
+      "endpoints": []
+    },
+    {
+      "page": "order",
+      "apiFiles": [
+        "order.js"
+      ],
+      "endpoints": [
+        {
+          "apiFile": "order.js",
+          "fn": "getMedicalOrders",
+          "method": "GET",
+          "url": "/orders",
+          "doc": "医嘱列表（可按类型/类别/状态筛选）"
+        },
+        {
+          "apiFile": "order.js",
+          "fn": "getExaminations",
+          "method": "GET",
+          "url": "/examinations",
+          "doc": "检查检验列表"
+        }
+      ]
+    },
+    {
+      "page": "patient",
+      "apiFiles": [
+        "patient.js"
+      ],
+      "endpoints": [
+        {
+          "apiFile": "patient.js",
+          "fn": "getPatientInfo",
+          "method": "GET",
+          "url": "/patient/info",
+          "doc": "患者基本信息 + 住院信息"
+        },
+        {
+          "apiFile": "patient.js",
+          "fn": "getDiagnoses",
+          "method": "GET",
+          "url": "/patient/diagnoses",
+          "doc": "诊断记录"
+        },
+        {
+          "apiFile": "patient.js",
+          "fn": "getAllergies",
+          "method": "GET",
+          "url": "/patient/allergies",
+          "doc": "过敏史"
+        },
+        {
+          "apiFile": "patient.js",
+          "fn": "getContacts",
+          "method": "GET",
+          "url": "/patient/contacts",
+          "doc": "家属/紧急联系人"
+        }
+      ]
+    },
+    {
+      "page": "staff",
+      "apiFiles": [
+        "hospital.js",
+        "staff.js"
+      ],
+      "endpoints": [
+        {
+          "apiFile": "hospital.js",
+          "fn": "getDepartments",
+          "method": "GET",
+          "url": "/hospital/departments",
+          "doc": "科室介绍"
+        },
+        {
+          "apiFile": "staff.js",
+          "fn": "getResponsibleStaff",
+          "method": "GET",
+          "url": "/staff/responsible",
+          "doc": "责任医护团队"
+        },
+        {
+          "apiFile": "staff.js",
+          "fn": "getDutySchedule",
+          "method": "GET",
+          "url": "/staff/duty",
+          "doc": "责任医护本周排班"
+        }
+      ]
+    },
+    {
+      "page": "vital",
+      "apiFiles": [
+        "vital.js"
+      ],
+      "endpoints": [
+        {
+          "apiFile": "vital.js",
+          "fn": "getVitalSigns",
+          "method": "GET",
+          "url": "/vitals",
+          "doc": "体征记录（days: 近 N 天）"
+        }
+      ]
+    }
+  ],
+  "storeEndpoints": [
+    {
+      "apiFile": "auth.js",
+      "fn": "login",
+      "method": "POST",
+      "url": "/auth/login",
+      "doc": "登录"
+    },
+    {
+      "apiFile": "auth.js",
+      "fn": "logout",
+      "method": "POST",
+      "url": "/auth/logout",
+      "doc": "退出登录"
+    },
+    {
+      "apiFile": "auth.js",
+      "fn": "getPatientContext",
+      "method": "GET",
+      "url": "/auth/patient-context",
+      "doc": "获取当前患者上下文（患者/家属）"
+    },
+    {
+      "apiFile": "notice.js",
+      "fn": "getNoticeList",
+      "method": "GET",
+      "url": "/notices",
+      "doc": "通知公告列表"
+    }
+  ]
+}

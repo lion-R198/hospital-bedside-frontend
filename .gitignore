@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.verify/
+*.ref/
+*.local
+.DS_Store
+npm-debug.log*
+
+# ---- IDE ----
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+
+# ---- Vite 运行期临时文件 ----
+vite.config.js.timestamp-*.mjs
+
+# ---- 日志 ----
+logs/
+*.log

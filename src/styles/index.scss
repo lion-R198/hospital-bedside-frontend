@@ -1,0 +1,110 @@
+// ============================================================
+// 床旁信息系统 - 温暖医疗风格设计变量
+// 主色：暖珊瑚橙（医疗关怀感）+ 辅助青绿（健康安心感）
+// ============================================================
+$--color-primary: #E8734A;
+$--color-primary-light: #F2926B;
+$--color-primary-lighter: #FDF0EA;
+$--color-success: #3FA37C;
+$--color-success-lighter: #EAF6F1;
+$--color-warning: #E6A23C;
+$--color-danger: #D9534F;
+$--color-info: #7C8CA0;
+
+$--text-primary: #33414E;
+$--text-regular: #5A6B7D;
+$--text-secondary: #8A99A8;
+
+$--bg-page: #FAF6F2;
+$--bg-card: #FFFFFF;
+$--border-color: #EFE7DF;
+
+$--radius-base: 10px;
+$--radius-card: 14px;
+$--shadow-card: 0 4px 18px rgba(196, 148, 116, 0.12);
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  background-color: $--bg-page;
+  color: $--text-primary;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// 通用卡片
+.app-card {
+  background: $--bg-card;
+  border-radius: $--radius-card;
+  box-shadow: $--shadow-card;
+  padding: 20px;
+  border: 1px solid $--border-color;
+}
+
+.app-card + .app-card {
+  margin-top: 16px;
+}
+
+// 卡片标题
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  color: $--text-primary;
+  margin: 0 0 16px;
+
+  .card-title-bar {
+    width: 4px;
+    height: 18px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, $--color-primary, $--color-primary-light);
+  }
+
+  .card-title-extra {
+    margin-left: auto;
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
+
+// 页面容器
+.page-container {
+  padding: 16px 20px 24px;
+}
+
+// Element Plus 主题微调
+.el-button--primary {
+  --el-button-bg-color: #{$--color-primary};
+  --el-button-border-color: #{$--color-primary};
+  --el-button-hover-bg-color: #{$--color-primary-light};
+  --el-button-hover-border-color: #{$--color-primary-light};
+}
+
+.el-menu {
+  border-right: none;
+}
+
+// 大字体工具类（适配中老年患者，可用性要求：字体大、对比度高）
+.text-lg {
+  font-size: 18px;
+}
+.text-xl {
+  font-size: 22px;
+  font-weight: 600;
+}
+.text-muted {
+  color: $--text-secondary;
+}

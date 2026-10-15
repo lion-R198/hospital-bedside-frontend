@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>开发辅助：登录引导（自动化验证用）</title>
+  </head>
+  <body>
+    <script>
+      /*
+       * 仅供开发/自动化验证使用：调用真实登录接口获取令牌后跳转目标页。
+       * 用途：无头浏览器不便填写表单，用此页完成「登录 → 存令牌 → 进业务页」链路，
+       *       使截图验证覆盖真实鉴权与真实后端数据。
+       * 参数：?user=<账号>&pwd=<密码>&to=<落地路由>
+       * 注意：上线前应删除本文件（见 README）。
+       */
+      const qs = new URLSearchParams(location.search)
+      const user = qs.get('user') || 'chenxiaoming'
+      const pwd = qs.get('pwd') || '123456'
+      const to = qs.get('to') || '/'
+
+      fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: user, password: pwd })
+      })
+        .then((r) => r.json())
+        .then((res) => {
+          if (res.code !== 200) {
+            document.body.textContent = '登录失败：' + res.msg
+            return
+          }
+          const d = res.data
+          localStorage.setItem('Bedside-Token', d.token)
+          localStorage.setItem(
+            'Bedside-User',
+            JSON.stringify({
+              id: d.userInfo.id,
+              username: d.userInfo.username,
+              realName: d.userInfo.realName,
+              roleType: d.userInfo.roleType,
+              patientId: d.userInfo.patientId,
+              staffId: d.userInfo.staffId
+            })
+          )
+          location.replace(to)
+        })
+        .catch((e) => {
+          document.body.textContent = '请求异常：' + e.message
+        })
+    </script>
+  </body>
+</html>
